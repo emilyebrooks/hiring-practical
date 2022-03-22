@@ -22,8 +22,8 @@ to add a GA tag to the GTM container on this page.
 We then would like you to setup 2 events; one on our modal launch
 button (more on that in a moment), and one on the form that pops up.
 
-You should have recieved an invite via email to the Test GTM container,
-if not, please email the person you sent you this test.
+You should have received an invite via email to the Test GTM container,
+if not, please email the person who sent you this test.
 
 To continue please use the "testCLI" object methods in your console to get the GA ID,
 Show Your Test Button and get the Details on the Events we Want to fire. 
