@@ -77,37 +77,42 @@ Event Label: {{SayFieldValue}} //This should be dynamic
 	}
 };
 
+//Hides modal window when user clicks Close button
 function hideModal(){
 	var modal = document.getElementById("testModal");
 	modal.style.display = "none";
 }
 
+//Displays an alert when user clicks Say It! button
 function sayHello(){
 	var hello = document.getElementById("say").value;
 	alert(hello);
 }
 
+console.log("Testing Emily Brooks"); //Testing if this page is updating. Did not print.
 
 function loadPopup() {
 	var popUp = `
 	<div class="default-max-width">
-        <div id="testModal" class="modal" tabindex="-1" role="dialog" style="display:block">
+        <div id="testModal" class="modal fade" tabindex="-1" role="dialog" style="display:block">
           <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
+            <div class="modal-content" style="border:5px solid black; padding:20px; background-color:white;">
+              <div class="modal-header" style="display:flex; justify-content:space-between;">
+              <h4 class="modal-title" style="display:inline;">TEST MODAL!</h4>
                 <button type="button" class="close" onclick="hideModal();" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Test Popup!</h4>
               </div>
-              <div class="modal-body">
+
+              <div class="modal-body" style="padding:20px;">
                 <p>
                   <form>
                     <div class="form-group">
                       <label for="say">Say Hello:</label>
-                      <input type="text" id="say" class="form-control" placeholder="Hello Wheelhouse!" name="say">
+                      <input type="text" id="say" class="form-control" placeholder="Howdy Wheelhouse!" name="say">
                     </div>
                   </form>
                 </p>
               </div>
+
               <div class="modal-footer">
                 <button type="button" onclick="hideModal();" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="submit" onclick="sayHello();" class="btn btn-primary">Say It!</button>
@@ -118,6 +123,7 @@ function loadPopup() {
       </div>
       `;
 
+      //When user clicks
       var content = document.getElementById("mainContent");
       content.innerHTML = popUp;
 }

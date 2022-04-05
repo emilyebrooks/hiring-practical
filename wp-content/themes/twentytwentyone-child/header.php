@@ -62,12 +62,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							
 							<p>We also added some Analytics requirements to the page but didn't implement them. They should be easy to find, good luck!<br /><br /></p>
 							<p></p> -->
-							<p><button id="testButton" class="btn btn-success" style="display:none;" onclick="loadPopup();" title="Bind an event to me!">Subscription Popup!</button></p>
+							<p><button id="testButton" class="btn btn-success" data-toggle="modal" data-target="#testModal" onclick="loadPopup();" title="Bind an event to me!">Subscription Popup!</button></p>
 						</div>
 					</div>
 
 					<div id="mainContent" class="container">
+						<!-- this is where the modal window pops up -->
 
 					</div> 
 					<!-- /container -->
 					<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+					
